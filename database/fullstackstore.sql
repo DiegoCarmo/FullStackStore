@@ -13,6 +13,8 @@ create table produto(
 	primary key (id_nome)
 )default charset utf8mb4;
 
+
+
 insert into produto 
 (categoria, descricao, preco_antigo, preco, nome_imagem)
 values
@@ -20,7 +22,7 @@ values
 ('acessorios','Bone Dino',120.00,89.90,'imagens/produtos/bone.jpg'),
 ('acessorios','Camisa Developer',120.00,99.90,'imagens/produtos/camisa.jpg'),
 ('livros','Livro - JS e JQuery',150.00,79.90,'imagens/produtos/livros.jpg'),
-('livros','Livro - HTML e CSS',130.00,69.90,'magens/produtos/livrohtml.jpg'),
+('livros','Livro - HTML e CSS',130.00,69.90,'imagens/produtos/livrohtml.jpg'),
 ('livros','Livro - Guia pratico',200.00,99.99,'imagens/produtos/guiapratico.jpg'),
 ('eletronicos','Iphone 11',5999.00,2999.00,'imagens/produtos/iphone.jpg'),
 ('eletronicos','PlayStation 5 2020',5000.00,1999.00,'imagens/produtos/play5.png'),
@@ -54,5 +56,11 @@ VALUES
 ('Cosmo','Rua portugal','011- 55555555','Caneca FUllstack',39.99,5,NULL);
 
 
+
+create table contato(
+  id_contato int auto_increment,
+  nome varchar (30),
+  msg varchar (300),
+primary key (id_contato))
 
 
