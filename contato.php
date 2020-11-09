@@ -26,48 +26,50 @@ if (isset($_POST['nome']) && isset($_POST['msg'])) {
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="index.css" />
+ 
   <title>FullStack Store</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
-  <div class="imagem01">
-    <a href="index.php"> <img src="imagens/box logo.png" class="boxlogo" /> </a>
-  </div>
+ 
   <!--   MENU -->
   <?php
   include("menu.html");
   ?>
 
-  <div class="social">
+
+   <div class="social">
     <div>
-      <img class="lgsocial" src="imagens/logos/instagram.png " />
-      <img class="lgsocial" src="imagens/logos/facebook.png " />
-      <img class="lgsocial" src="imagens/logos/whats.png " />
+      <a href="https://instagram.com" target="_blank"><img class="lgsocial" src="imagens/logos/instagram.png "></a>
+      <a href="https://facebook.com" target="_blank" ><img class="lgsocial" src="imagens/logos/facebook.png " /></a>
+      <a href="https://whatsapp.com" target="_blank"><img class="lgsocial" src="imagens/logos/whats.png " /></a>
     </div>
   </div>
 
   <div id="form">
-    <form method="post" action="">
+    <form class="form-group" method="post" action="">
       <h1>Como podemos te ajudar ?</h1>
-      <hr style="width: 50%;">
+      <hr>
 
       <label for="pnome">Nome:</label><br />
-      <input type="text" id="nome" name="nome" />
+      <input class="form-control" type="text" id="nome" name="nome" />
       <br />
       <br />
-      <label for="areaMsg">Mensagem:</label><br />
-      <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+      <label class= "areaMsg">Mensagem:</label><br />
+      <textarea class="form-control" name="msg" id="msg" rows="5"></textarea>
       <br /><br />
 
-      <input type="checkbox" name="checkbox" id="checkbox" />
-      <label for="checkbox">Concordo com termos de segurança.</label>
+      <input class="d-inline" type="checkbox" name="checkbox" id="checkbox" />
+      <label class="form-check-label d-inline" for="checkbox">Concordo com termos de segurança.</label>
       <br /><br />
 
-      <input type="submit" id="submit" style="width: 200px" />
+      <input class="form-control btn btn-primary" type="submit" id="submit" style="width: 200px" />
       <br /><br />
     </form>
-  </div>
+    
+
 
   <div>
     <?php
@@ -83,11 +85,12 @@ if (isset($_POST['nome']) && isset($_POST['msg'])) {
       echo "nenhum comentario registrado!";
     }
     ?>
-    <div class="boxpagamentos">
-      <div>
-        <h2>Formas de pagamentos</h2>
-        <img src="imagens/pagamentos.png" class="imgpagamentos">
-      </div>
+  </div>
+</div>
+     <?php
+    include("footer.html");
+    ?>
+
 </body>
 
 </html>
