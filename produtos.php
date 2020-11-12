@@ -26,6 +26,11 @@ mysqli_set_charset($conexao, "utf8mb4");
   </style>
 
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -35,20 +40,41 @@ mysqli_set_charset($conexao, "utf8mb4");
   include("menu.html");
   ?>
 
+<div class="container-fluid bg-secondary mx-0 px-0 py-2">
+  <nav class="navbar-expand-lg navbar-dark">
+
+        <button class="navbar-toggler w-100" type="button" data-toggle="collapse" data-target="#categoriasNav">
+        <span class="text-light">Categorias</span></button>
+
+   <div id="categoriasNav" class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav nav-fill w-100">
+        <li class="nav-item font-weight-bold">
+          <span class="col text-light mx-4" onclick="exibir_todos()">Todos(12)</span>
+        </li>
+        <li class="nav-item font-weight-bold">
+          <span class="col text-light mx-4" onclick="exibir_categoria('acessorios')">Acessorios(3)</span>
+        </li>
+        <li class="nav-item font-weight-bold">
+          <span class="col text-light mx-4" onclick="exibir_categoria('livros')">Livros(3)</span>
+        </li>   
+        <li class="nav-item font-weight-bold">
+          <span class="col text-light mx-4" onclick="exibir_categoria('eletronicos')">Eletronicos(3)</span>
+        </li>  
+        <li class="nav-item font-weight-bold">
+          <span class="col text-light mx-4" onclick="exibir_categoria('canecas')">Canecas(3)</span>
+        </li>     
+      </ul>
+   </div>
+ </nav>
+</div>
+
+
   <header class="container-fluid">
-    <h2 id="h2">Produtos</h2>
+    <h2>Produtos</h2>
   </header>
   <hr />
   
-  <div class="container px-0">
-  <nav class="navbar row navbar-expand-lg bg-dark text-center">
-      <span class="col text-primary mx-4" onclick="exibir_todos()">Todos(12)</span>
-      <span class="col text-primary mx-4" onclick="exibir_categoria('acessorios')">Acessorios(3)</span>
-      <span class="col text-primary mx-4" onclick="exibir_categoria('livros')">livros(3)</span>
-      <span class="col text-primary mx-4" onclick="exibir_categoria('eletronicos')">Eletronicos(3)</span>
-      <span class="col text-primary mx-4" onclick="exibir_categoria('canecas')">Canecas(3)</span>
-  </nav>
-</div>
+ 
 
 
 <div class="container-fluid row row-cols-2 row-cols-md-3 mx-auto">
